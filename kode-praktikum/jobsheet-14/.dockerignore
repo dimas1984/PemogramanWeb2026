@@ -1,0 +1,7 @@
+# Berkas yang tidak perlu ikut masuk ke dalam image.
+Dokumentasi/
+docs/
+README.md
+.git
+.gitignore
+*.md

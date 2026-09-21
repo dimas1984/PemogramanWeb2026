@@ -134,6 +134,8 @@ Alternatif struktur di luar matriks 16 minggu pada bagian 5 — untuk format kel
 | 9-15 | PBL |PBL| PBL |PBL
 | 16 | **Demo PBL** | **Demo PBL**| **Demo PBL** | **Demo PBL** |
 
+> **Materi pengayaan (di luar RPS):** [`kode-praktikum/jobsheet-14`](kode-praktikum/jobsheet-14/README.md) — mendeploy aplikasi ke internet secara nyata memakai Render (container Docker) + Supabase (PostgreSQL terkelola), keduanya paket gratis. Bersifat opsional bagi mahasiswa yang ingin aplikasinya bisa dibuka lewat tautan publik, bukan hanya `localhost`.
+
 
 ---
 
