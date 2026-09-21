@@ -1,0 +1,26 @@
+# Render Blueprint - alternatif membuat service lewat berkas, bukan lewat
+# form di dashboard. Penjelasan: Dokumentasi/04-deploy-ke-render.md
+services:
+  - type: web
+    name: simpus-mini
+    runtime: docker
+    plan: free
+    region: singapore
+    rootDir: kode-praktikum/jobsheet-14
+    dockerfilePath: ./Dockerfile
+    envVars:
+      # sync: false berarti nilainya TIDAK ditulis di berkas ini,
+      # melainkan diisi manual lewat dashboard Render. Inilah cara
+      # kredensial tetap terjaga walau repository bersifat publik.
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
+      - key: DB_SSLMODE
+        value: require

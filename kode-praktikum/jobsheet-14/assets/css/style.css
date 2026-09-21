@@ -1,0 +1,341 @@
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #f5f6f8;
+    line-height: 1.5;
+}
+
+a {
+    color: #1d5b8a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Header & Navbar (Flexbox) ===== */
+header {
+    background-color: #1d5b8a;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+header nav a {
+    color: #fff;
+    font-weight: 500;
+}
+
+.auth-status {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #fff;
+}
+
+.auth-status a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ===== Main Layout ===== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #1d5b8a;
+}
+
+/* ===== Kartu Statistik (CSS Grid) ===== */
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+main section:nth-of-type(2) article {
+    background-color: #eef4fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+main section:nth-of-type(2) article h3 {
+    font-size: 0.95rem;
+    color: #55677a;
+    margin-bottom: 0.5rem;
+}
+
+main section:nth-of-type(2) article p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1d5b8a;
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #e2e6ea;
+}
+
+thead {
+    background-color: #1d5b8a;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f9fb;
+}
+
+tbody tr:hover {
+    background-color: #eef4fa;
+}
+
+td button {
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+td button:first-of-type,
+td a.btn-edit {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+td button:last-of-type {
+    background-color: #d9534f;
+    color: #fff;
+}
+
+td a.btn-edit {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    margin-right: 0.35rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+td form.form-hapus {
+    display: inline;
+}
+
+/* ===== Pagination ===== */
+.pagination {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pagination a {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+    color: #1d5b8a;
+}
+
+.pagination a.active {
+    background-color: #1d5b8a;
+    color: #fff;
+    border-color: #1d5b8a;
+}
+
+.search-box form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.search-box button {
+    padding: 0.55rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #1d5b8a;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ===== Form ===== */
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #444;
+}
+
+form input,
+form select {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button[type="submit"] {
+    background-color: #1d5b8a;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #164869;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    color: #7a8794;
+    font-size: 0.9rem;
+}
+
+/* ===== Tabel Responsif ===== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* ===== Hamburger Menu (JS-driven) ===== */
+.nav-toggle-label {
+    display: none;
+    font-size: 1.6rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== Flash Message ===== */
+.flash {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* ===== Pesan Error Validasi ===== */
+.error {
+    display: block;
+    color: #d9534f;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* ===== Kolom Pencarian ===== */
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablet ke bawah */
+@media (max-width: 768px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    header {
+        position: relative;
+    }
+
+    .nav-toggle-label {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 1rem;
+    }
+
+    header nav.nav-open {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    form input,
+    form select {
+        max-width: 100%;
+    }
+}
